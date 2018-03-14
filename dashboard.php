@@ -8,7 +8,6 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <!--js-->
@@ -75,7 +74,6 @@
 	 <div class="market-updates">
 			<div class="col-md-4 user">
 				<div class="market-update-block clr-block-1">
-					<div class="col-md-8 market-update-left">
 					<div class="col-md-8 market-update-left">
 						<h3>83</h3>
 						<h4>Registered User</h4>
@@ -239,16 +237,24 @@
 		    </div>
 	 </div>
 	<div class="clearfix"> </div>
-	<div class="add_fixed">				
-		<div class="add-phone">
-			<div class="animated infinite zoomIn add-ph-circle"></div>
-			<div class="animated infinite pulse add-ph-circle-fill"></div>
-			<div class="animated infinite tada add-ph-img-circle"></div>
-		</div>
 	
 </div>
-	
-</div>
+<!-- script-for sticky-nav -->
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-main").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header-main").addClass("fixed");
+				}else{
+					$(".header-main").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
 <!--slide bar menu end here-->
 <script>
 var toggle = true;
